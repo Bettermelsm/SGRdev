@@ -1,0 +1,509 @@
+---
+title: "Price"
+author: "Sengene"
+date: "2025-11-02"
+output: html_document
+---
+
+<style>
+.table-bordered {
+  border: 1px solid #ddd;
+}
+
+.table-striped tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table-condensed td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.centered-header {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #f0f8ff;
+}
+
+/* 表头行加粗 */
+.table-header-row td {
+  font-weight: bold;
+}
+
+/* 数量列宽度调整 */
+table td:nth-child(4) {
+  width: 40px; /* 或者您需要的宽度 */
+  min-width: 40px;
+  
+table td:nth-child(1) {
+  width: 180px; /* 或者您需要的宽度 */
+  min-width: 180px;
+</style>
+
+<table class="table-bordered table-striped table-condensed">
+    <tr>
+        <td colspan="6" class="centered-header">结核杆菌促单核细胞分化项目报价表</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>报告等级</td>
+        <td>SG/TB</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>执行人员</td>
+        <td>SG101CS</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>有效日期</td>
+        <td>20251009</td>
+    </tr>
+</table>
+
+</br>
+</br>
+
+
+<table class="table-bordered table-striped table-condensed">
+    <tr>
+        <td colspan="6" class="centered-header">内容一</td>
+    </tr>
+    <tr class="table-header-row">
+        <td>项目</td>
+        <td>单价</td>
+        <td>规格</td>
+        <td>数量</td>
+        <td>小计</td>
+        <td>备注</td>
+    </tr>
+    <tr>
+        <td>THP-1细胞购买</td>
+        <td>1500</td>
+        <td>元/批</td>
+        <td>1</td>
+        <td>1500</td>
+        <td>https://www.sunncell.com.cn/product/SNL-044</td>
+    </tr>
+    <tr>
+        <td>细胞培养及刺激</td>
+        <td>400</td>
+        <td>元/批</td>
+        <td>8</td>
+        <td>3200</td>
+        <td>分组：正常THP-1，破骨诱导组，破骨诱导+ESAT-6低中高剂量，破骨诱导+CFP-10低中高剂量共8组</td>
+    </tr>
+    <tr>
+        <td>Denosumab购买</td>
+        <td>1800</td>
+        <td>1mg</td>
+        <td>1</td>
+        <td>1800</td>
+        <td>https://www.medchemexpress.cn/denosumab.html</td>
+    </tr>
+    <tr>
+        <td>M-CSF 蛋白购买</td>
+        <td>5300</td>
+        <td>50 μg</td>
+        <td>1</td>
+        <td>5300</td>
+        <td>https://www.medchemexpress.cn/recombinant-proteins/m-csf-protein-human.html</td>
+    </tr>
+    <tr>
+        <td>破骨细胞诱导</td>
+        <td>1000</td>
+        <td>元/批</td>
+        <td>2</td>
+        <td>2000</td>
+        <td>用10 ng/mL M-CSF+100 ng/mL RANKL的αMEM全培诱导足量的破骨细胞进行后续实验</td>
+    </tr>
+    <tr>
+        <td>破骨细胞处理</td>
+        <td>200</td>
+        <td>元/组</td>
+        <td>8</td>
+        <td>1600</td>
+        <td>将破骨细胞铺板至骨切片上培养以便进行后续实验</td>
+    </tr>
+    <tr>
+        <td>骨切片购买</td>
+        <td>6500</td>
+        <td>元/套</td>
+        <td>1</td>
+        <td>6500</td>
+        <td>用于破骨细胞实验的骨切片载体</td>
+    </tr>
+    <tr>
+        <td>RNA提取</td>
+        <td>15</td>
+        <td>元/组</td>
+        <td>8</td>
+        <td>120</td>
+        <td>8组</td>
+    </tr>
+    <tr>
+        <td>引物设计合成</td>
+        <td>120</td>
+        <td>元/指标</td>
+        <td>7</td>
+        <td>840</td>
+        <td>（Dcstamp、Atp6v0d2、Itgb3、Ctsk、Opg、RANKL和TRAP</td>
+    </tr>
+    <tr>
+        <td>RT-qPCR检测</td>
+        <td>65</td>
+        <td>元/组/指标</td>
+        <td>56</td>
+        <td>3640</td>
+        <td>3个浓度+3个浓度+因子诱导+无诱导共8组，7个指标</td>
+    </tr>
+    <tr>
+        <td>TRAP染色</td>
+        <td>200</td>
+        <td>元/组/指标</td>
+        <td>8</td>
+        <td>1600</td>
+        <td>根据qpcr结果选取合适的浓度进行后续实验，共4个组</td>
+    </tr>
+    <tr>
+        <td>Human TRACP-5b elisa试剂盒</td>
+        <td>1200</td>
+        <td>48T </td>
+        <td>1</td>
+        <td>1200</td>
+        <td>Sengene Tech</td>
+    </tr>
+    <tr>
+        <td>Human TRACP-5a elisa试剂盒</td>
+        <td>1200</td>
+        <td>48T </td>
+        <td>1</td>
+        <td>1200</td>
+        <td>Sengene Tech</td>
+    </tr>
+    <tr>
+        <td>ELISA检测</td>
+        <td>600</td>
+        <td>元/板</td>
+        <td>2</td>
+        <td>1200</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>RNA提取2</td>
+        <td>15</td>
+        <td>元/组</td>
+        <td>4</td>
+        <td>60</td>
+        <td>4组，正常THP-1，破骨诱导组，破骨诱导+ESAT-6最适剂量，破骨诱导+CFP-10最适剂量</td>
+    </tr>
+    <tr>
+        <td>引物设计合成2</td>
+        <td>120</td>
+        <td>元/指标</td>
+        <td>2</td>
+        <td>240</td>
+        <td>CCRL2及PRDM1</td>
+    </tr>
+    <tr>
+        <td>RTqPCR检测2</td>
+        <td>65</td>
+        <td>元/组/指标</td>
+        <td>8</td>
+        <td>520</td>
+        <td>4组，2个指标</td>
+    </tr>
+    <tr>
+        <td>TRAP染色</td>
+        <td>200</td>
+        <td>元/组/样</td>
+        <td>12</td>
+        <td>2400</td>
+        <td>4组,重复3次</td>
+    </tr>
+    <tr>
+        <td>玻片扫描</td>
+        <td>65</td>
+        <td>元/组/样</td>
+        <td>12</td>
+        <td>780</td>
+        <td>4组,重复3次</td>
+    </tr>
+    <tr>
+        <td>溶解坑面积电镜扫描</td>
+        <td>1500</td>
+        <td>元/组/样</td>
+        <td>4</td>
+        <td>6000</td>
+        <td>扫描电镜观察破骨细胞在骨切片上形成的溶解坑</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>合计</td>
+        <td>41700</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="6" class="centered-header">内容二</td>
+    </tr>
+    <tr class="table-header-row">
+        <td>项目</td>
+        <td>单价</td>
+        <td>规格</td>
+        <td>数量</td>
+        <td>总价</td>
+        <td>备注</td>
+    </tr>
+    <tr>
+        <td>MMa-bm细胞购买</td>
+        <td>5616</td>
+        <td>2 x 10^6cells</td>
+        <td>1</td>
+        <td>5616</td>
+        <td>https://sciencellonline.com/cn/mouse-macrophage/?srsltid=AfmBOoqKm3MN-skyF_UGYXfg6NBSiave1UY_xp7u7MP379DT2eEmJZv4</td>
+    </tr>
+    <tr>
+        <td>BCG 卡介苗试剂</td>
+        <td>2200</td>
+        <td>60mg</td>
+        <td>1</td>
+        <td>2200</td>
+        <td>https://www.mlbio.cn/goods-98899.html</td>
+    </tr>
+    <tr>
+        <td>H37Ra购买</td>
+        <td>5230</td>
+        <td> 6*10mg</td>
+        <td>1</td>
+        <td>5230</td>
+        <td>https://www.ybiotechmall.com/51bioe/ybiotechmall_Product_2064663639.html</td>
+    </tr>
+    <tr>
+        <td>菌株感染</td>
+        <td>1300</td>
+        <td>元/批</td>
+        <td>2</td>
+        <td>2600</td>
+        <td>分别使用BCG、H37Ra感染</td>
+    </tr>
+    <tr>
+        <td>菌与细胞共培养</td>
+        <td>400</td>
+        <td>元/批</td>
+        <td>4</td>
+        <td>1600</td>
+        <td>取4个浓度结核杆菌毒力因子分别跟细胞共培养</td>
+    </tr>
+    <tr>
+        <td>CCRL2敲低质粒构建</td>
+        <td>480</td>
+        <td>5ug</td>
+        <td>3</td>
+        <td>1440</td>
+        <td>pLKO.1-eGFP</td>
+    </tr>
+    <tr>
+        <td>CCRL2过表达质粒构建</td>
+        <td>680</td>
+        <td>5ug</td>
+        <td>1</td>
+        <td>680</td>
+        <td>PCDH-eGFP</td>
+    </tr>
+    <tr>
+        <td>PRDM1过表达质粒构建</td>
+        <td>680</td>
+        <td>5ug</td>
+        <td>1</td>
+        <td>680</td>
+        <td>PCDH-eGFP</td>
+    </tr>
+    <tr>
+        <td>PRDM1敲低质粒构建</td>
+        <td>480</td>
+        <td>5ug</td>
+        <td>3</td>
+        <td>1440</td>
+        <td>pLKO.1-eGFP</td>
+    </tr>
+    <tr>
+        <td>敲低慢病毒包装</td>
+        <td>3780</td>
+        <td>元/靶点</td>
+        <td>3</td>
+        <td>11340</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>过表达慢病毒包装</td>
+        <td>6600</td>
+        <td>元/靶点</td>
+        <td>1</td>
+        <td>6600</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>破骨细胞诱导</td>
+        <td>1000</td>
+        <td>元/批</td>
+        <td>2</td>
+        <td>2000</td>
+        <td>用10 ng/mL M-CSF+100 ng/mL RANKL的αMEM全培诱导足量的破骨细胞进行后续实验</td>
+    </tr>
+    <tr>
+        <td>骨切片购买</td>
+        <td>8500</td>
+        <td>元/套</td>
+        <td>1</td>
+        <td>8500</td>
+        <td>用于破骨细胞实验的骨切片载体</td>
+    </tr>
+    <tr>
+        <td>破骨细胞处理</td>
+        <td>1500</td>
+        <td>元/批</td>
+        <td>1</td>
+        <td>1500</td>
+        <td>将破骨细胞铺板至骨切片上培养以便进行后续实验</td>
+    </tr>
+    <tr>
+        <td>骨切片购买</td>
+        <td>8500</td>
+        <td>元/套</td>
+        <td>1</td>
+        <td>8500</td>
+        <td>用于破骨细胞实验的骨切片载体</td>
+    </tr>
+    <tr>
+        <td>RNA提取</td>
+        <td>15</td>
+        <td>元/组</td>
+        <td>8</td>
+        <td>120</td>
+        <td>过表达，过表达对照组，敲低，敲低对照组共4组，两个基因共8组</td>
+    </tr>
+    <tr>
+        <td>引物设计合成</td>
+        <td>120</td>
+        <td>元/指标</td>
+        <td>7</td>
+        <td>840</td>
+        <td>（Dcstamp、Atp6v0d2、Itgb3、Ctsk、Opg、RANKL和TRAP</td>
+    </tr>
+    <tr>
+        <td>RT-qPCR检测</td>
+        <td>65</td>
+        <td>元/组/指标</td>
+        <td>28</td>
+        <td>1820</td>
+        <td>8组，7个指标</td>
+    </tr>
+    <tr>
+        <td>TRAP染色</td>
+        <td>200</td>
+        <td>元/组/指标</td>
+        <td>16</td>
+        <td>3200</td>
+        <td>8组，2个指标</td>
+    </tr>
+    <tr>
+        <td>Human TRACP-5b elisa试剂盒</td>
+        <td>1200</td>
+        <td>48T </td>
+        <td>1</td>
+        <td>1200</td>
+        <td>Sengene Tech</td>
+    </tr>
+    <tr>
+        <td>Human TRACP-5a elisa试剂盒</td>
+        <td>1200</td>
+        <td>48T </td>
+        <td>1</td>
+        <td>1200</td>
+        <td>Sengene Tech</td>
+    </tr>
+    <tr>
+        <td>ELISA检测</td>
+        <td>600</td>
+        <td>元/板</td>
+        <td>2</td>
+        <td>1200</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>RNA提取2</td>
+        <td>15</td>
+        <td>元/组</td>
+        <td>8</td>
+        <td>120</td>
+        <td>8组</td>
+    </tr>
+    <tr>
+        <td>引物设计合成2</td>
+        <td>120</td>
+        <td>元/指标</td>
+        <td>2</td>
+        <td>240</td>
+        <td>CCRL2及PRDM1</td>
+    </tr>
+    <tr>
+        <td>RTqPCR检测2</td>
+        <td>65</td>
+        <td>元/组/指标</td>
+        <td>16</td>
+        <td>1040</td>
+        <td>8组，2个指标</td>
+    </tr>
+    <tr>
+        <td>TRAP染色</td>
+        <td>200</td>
+        <td>元/组/样</td>
+        <td>24</td>
+        <td>4800</td>
+        <td>8组,重复3次</td>
+    </tr>
+    <tr>
+        <td>玻片扫描</td>
+        <td>65</td>
+        <td>元/组/样</td>
+        <td>24</td>
+        <td>1560</td>
+        <td>8组,重复3次</td>
+    </tr>
+    <tr>
+        <td>溶解坑面积电镜扫描</td>
+        <td>1500</td>
+        <td>元/组/样</td>
+        <td>10</td>
+        <td>15000</td>
+        <td>扫描电镜观察破骨细胞在骨切片上形成的溶解坑</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>合计</td>
+        <td>92266</td>
+        <td></td>
+    </tr>
+</table>

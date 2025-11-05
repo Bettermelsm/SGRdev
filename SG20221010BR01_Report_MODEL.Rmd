@@ -1,0 +1,1180 @@
+---
+title: "SG20221010BR01项目结题报告"
+author: "Sengene"
+date: '2023-08-27'
+output: 
+  html_document:
+    toc: TRUE 
+    toc_depth: 3  
+    number_sections: true 
+    toc_float: true
+    collapsed: false
+    smooth_scroll: false
+    theme: united 
+    highlight: tango 
+    fig_width: 3 
+    fig_height: 2
+---
+
+# 项目基本信息</br>
+<table class='table-bordered table-striped table-condensed'>
+    <tr>
+        <td>项目编号</td>
+        <td>SG202221010BR01</td>
+    </tr>
+    <tr>
+        <td>项目名称</td>
+        <td>护肾痛风泰动物实验测序分析及实验验证</td>
+    </tr>
+    <tr>
+        <td>项目执行</td>
+        <td>SG001EXPBR</td>
+    </tr>
+    <tr>
+        <td>项目协同</td>
+        <td>SG004EXPBR</td>
+    </tr>
+    <tr>
+        <td>项目内容</td>
+        <td>1.ELISA检测</br>2.RT-qPCR检测</br>3.分子对接</br>4.宏基因组测序</td>
+    </tr>
+</table>
+</br>
+
+# 仪器与耗材</br>
+<table class='table-bordered table-striped table-condensed'>  
+    <tr>
+        <td>仪器</td>
+    </tr>
+    <tr>
+        <td>生产商/代理商</td>
+        <td>商品名</td>
+        <td>货号/型号</td>
+    </tr>
+    <tr>
+        <td>广州吉迪仪器有限公司</td>
+        <td>台式多用途高速冷冻离心机</td>
+        <td>JIDI-16R</td>
+    </tr>
+    <tr>
+        <td>德国艾本德股份公司</td>
+        <td>核酸蛋白测定仪</td>
+        <td>22331 Hamburg</td>
+    </tr>
+    <tr>
+        <td>爱普拜斯应用生物系统贸易（上海）有限公司/ABI</td>
+        <td>ABI7500荧光pcr仪</td>
+        <td>ABI PRISM® 7500 Sequence Detection System</td>
+    </tr>
+    <tr>
+        <td>苏州安泰空气技术有限公司</td>
+        <td>超净工作台</td>
+        <td>SW-CJ-2FD</td>
+    </tr>
+    <tr>
+        <td>上海一恒科学仪器有限公司</td>
+        <td>电热恒温水槽</td>
+        <td>DK-8D</td>
+    </tr>
+     <tr>
+        <td>上海海尔医疗科技有限公司</td>
+        <td>生物安全柜</td>
+        <td>HR40-Ⅱ</td>
+    </tr>
+    <tr>
+        <td>美林恒通(北京）仪器有限公司</td>
+        <td>超微量分光光度计</td>
+        <td>SMA4000</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>耗材</td>
+    </tr>
+    <tr>
+        <td>生产商</td>
+        <td>品名</td>
+        <td>货号</td>
+    </tr>
+    <tr>
+        <td>invitrogen</td>
+        <td>Trizol</td>
+        <td>10296-028</td>
+    </tr>
+    <tr>
+        <td>德国DBI</td>
+        <td>Bestar® SybrGreen qPCR mastermix</td>
+        <td>DBI-2043</td>
+    </tr>
+    <tr>
+        <td>德国DBI</td>
+        <td>BestarTM qPCR RT Kit</td>
+        <td>DBI-2220</td>
+    </tr>
+    <tr>
+        <td>鼎国生物</td>
+        <td>水饱和酚</td>
+        <td>DH241-1</td>
+    </tr>
+    <tr>
+        <td>广州化学试剂厂</td>
+        <td>异丙醇</td>
+        <td>YBC-500</td>
+    </tr>
+    <tr>
+        <td>广州化学试剂厂</td>
+        <td>氯仿</td>
+        <td>LF-500</td>
+    </tr>
+    <tr>
+        <td>广州化学试剂厂</td>
+        <td>乙醇</td>
+        <td>YC-500</td>
+    </tr>
+    <tr>
+        <td>广州艾基生物技术有限公司</td>
+        <td>引物</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>广州亿涛生物科技有限公司</td>
+        <td>无DNA/RNA酶水</td>
+        <td>ES8087</td>
+    </tr>
+    <tr>
+        <td>天根生化科技(北京)有限公司</td>
+        <td>Oligo（dT）</td>
+        <td>CD106</td>
+    </tr>
+</table>
+
+# 实验方法</br>
+## ELISA检测</br>
+&emsp;酶联免疫吸附试验（enzymelinkedimmunosorbentassay，ELISA）指将可溶性的抗原或抗体结合到聚苯乙烯等固相载体上，利用抗原抗体结合专一性进行免疫反应的定性和定量检测方法。</br>
+
+&emsp;将血清样本准备好后，按ELISA试剂盒说明书进行操作。</br>
+
+### 大鼠黄嘌呤氧化酶(XOD)、尿素氮(BUN)酶联免疫分析(ELISA)</br>
++ 标准品的稀释与加样:在酶标包被板上设标准品孔 10 孔，在第一、第二孔中分别加 标准品 100μl，然后在第一、第二孔中加标准品稀释液 50μl，混匀;然后从第一 孔、第二孔中各取 100μl 分别加到第三孔和第四孔，再在第三、第四孔分别加标准 品稀释液 50μl，混匀;然后在第三孔和第四孔中先各取 50μl 弃掉，再各取 50μl 分别加到第五、第六孔中，再在第五、第六孔中分别加标准品稀释液 50ul，混匀; 混匀后从第五、第六孔中各取 50μl 分别加到第七、第八孔中，再在第七、第八孔 中分别加标准品稀释液 50μl，混匀后从第七、第八孔中分别取 50μl 加到第九、 第十孔中，再在第九第十孔分别加标准品稀释液 50μl，混匀后从第九第十孔中各 取 50μl 弃掉。</br>
+>大鼠黄嘌呤氧化酶(XOD)试剂盒，稀释后各孔加样量都为 50μl，浓度分别为 600pg/ml, 400pg/ml, 200pg/ml, 100pg/ml, 50pg/ml。</br>
+大鼠尿素氮(BUN)试剂盒稀释后各孔加样量都为 50μl，浓度分别为15mmol/L, 10mmol/L, 5mmol/L, 2.5mmol/L， 1.25mmol/L）</br>
+
++ 加样:分别设空白孔(空白对照孔不加样品及酶标试剂，其余各步操作相同)、待测 样品孔。在酶标包被板上待测样品孔中先加样品稀释液 40μl，然后再加待测样品 10μl(样品最终稀释度为 5 倍)。加样将样品加于酶标板孔底部，尽量不触及孔壁， 轻轻晃动混匀。</br>
+
++ 加酶:每孔加入酶标试剂50ul，空白孔除外。
++ 温育:用封板膜封板后置37°C温育30分钟。
++ 配液:将30倍浓缩洗涤液用蒸馏水30倍稀释后备用。
++ 洗涤:小心揭掉封板膜，弃去液体，甩干，每孔加满洗涤液，静置30秒后弃去，如
+此重复 5 次，拍干。
++ 显色:每孔先加入显色剂A50ul，再加入显色剂B50ul，轻轻震荡混匀，37°C避光显
+色10分钟.
++ 终止:每孔加终止液50ul，终止反应(此时蓝色立转黄色)。
++ 测定:以空白孔调零，450nm波长依序测量各孔的吸光度(OD值)。在加终
+止液后 15 分钟以内进行测定。</br>
+
+### 尿酸（UA）含量检测</br>
+>检测原理：尿酸为嘌呤代谢的终末产物，嘌呤代谢紊乱、能量代谢异常及肾脏对尿酸的排泄障碍等均可引起血浆尿酸水平升高或降低，进而导致多种疾病如通风、肾病、心血管疾病的发生，尿酸含量的测定在临床诊断中有着重要的指导意义。</br>
+尿酸酶催化尿酸分解为尿囊素、CO2和H2O2，H2O2氧化亚铁氰化钾中的Fe2+生成Fe3+，Fe3+进一步与4-氨基安替比林和酚反应生成红色醌类化合物，在505nm处有特征吸收峰，通过测定505nm处的吸光值来计算尿酸的含量。</br>
+
++ 标准品：2.5 µmol/mL 尿酸溶液。
++ 试剂四：粉剂置于试剂瓶内玻璃管中。临用前加入 6 mL 试剂一，充分混匀后备用；用不完的试剂-20℃
+溶分装保存，避免反复冻融。-20℃可保存 4 周。
++ 工作液 A 的配制：按照试剂二：试剂三：试剂四=250μL：750μL：500μL（10S）的比例配制，用于样本测定管、空白管及标准管的检测。根据样本量现配现用，配后2 小时内用完（2-8℃或者冰上保存）。
++ 工作液 B 的配制：按照试剂二：试剂三：试剂一 =250μL：750μL：500μL（10S）的比例配制，用于样本对照管的检测。根据样本量现配现用，配后建议 2 小时内用完（2-8℃或者冰上保存）。
++ 标准溶液的制备：将2.5µmol/mL标准液用蒸馏水稀释为0.5、0.25、0.125、0.0625、0.03125、0.015625 µmol/mL的标准溶液备用
++ 分光光度计/酶标仪预热30min以上，调节波长至505nm，分光光度计用蒸馏水调零。
++ 旋涡混匀，37℃水浴或恒温培养箱中准确反应30min。于微量玻璃比色皿/96孔板，测定505nm处吸光值A，
+分别记为A对照管、A测定管、A标准管、A空白管。计算ΔA测定=A测定管-A对照管，ΔA标准=A标准管-A空白
+管。每个测定管需设一个对照管，标准曲线和空白管只需测1-2次。
++ UA 含量计算:根据标准管的浓度（x，μmol/mL）和吸光度ΔA标准（y，ΔA标准），建立标准曲线。根据标准曲线，将ΔA测定（y，ΔA测定）代入公式计算样本浓度（x，μmol/mL）。
++ 按液体体积计算：UA含量（µg/mL 血清）=x×V样÷V样×M=168x
+
+### 肌酐(Cr)含量检测</br>
+>检测原理：肌酐(creatinine，Cr)，化学式是 C4H7N3O，是肌肉在人体内代谢的产物，主要由肾小球滤过排出体外。血 中肌酐来自外源性和内源性两种，外源性肌酐是肉类食物在体内代谢后的产物;内源性肌酐是体内肌肉组织代谢 的产物。
+样品中的肌酐在肌酐酶的催化下水解生成肌酸。在肌酸酶的催化下肌酸水解生成肌氨酸和尿素。肌氨酸在肌 氨酸氧化酶的催化下氧化产生过氧化氢。过氧化物酶催化过氧化氢氧化 4-氨基安替比林偶联酚，生成有色化合物， 在 505nm 有特征吸收峰。</br>
+
++ 溶液的配制:
++ 试剂一:临用前每支加入 1.1 mL 蒸馏水，充分溶解。用不完的试剂-20°C分装保存两周。
++ 试剂二:临用前每支加入 1.05 mL 蒸馏水，充分溶解。用不完的试剂-20°C分装保存两周。
++ 试剂三:临用前每支加入 1 mL 蒸馏水(100T/96S)，充分溶解。为方便储存故多给一支。用不完的试剂-20°C
+分装保存两周。
++ 试剂三工作液:根据试验所需用量，按照试剂三 : 蒸馏水=1:9 的比例，充分混匀，现配现用。
++ 试剂四:临用前加入 1 mL 蒸馏水，充分溶解。用不完的试剂-20°C分装保存两个月。
++ 试剂五:临用前每支加入 2.2 mL 蒸馏水，充分溶解。用不完的试剂-20°C分装保存两周。
++ 试剂六:临用前根据实验所需用量，按照试剂六 A 液:试剂六 B 液=1:1 的比例，充分混匀，现用现配
++ 标准品:1 mg 肌酐。临用前加入 1 mL 蒸馏水，充分溶解，即 1 mg/mL 标准溶液，4°C保存一个月。临用
+前将其稀释至 200μg/mL 作为标准液待测.
++ 分光光度计/酶标仪预热 30 min 以上，调节波长至 505 nm，蒸馏水调零。
++ 充分混匀，37°C(哺乳动物)或 25°C(其他物种)条件下，显色 30 min。测定 505 nm 处的吸光度。分别记为 A 测定、A 空白、A 标准。ΔA 测定=A 测定-A 空白，ΔA 标准=A 标准-A 空白。
++ 肌酐含量(μg/mL)= C 标×ΔA 测÷ΔA 标×(V 上清+V 提取液二)÷ [V 液体×V 上清÷(V 提取液一+V 液体)] = 2612.5×ΔA 测÷ΔA 标
+
+>C 标:标准管浓度，200 μg/mL;V 样:加入样本体积，20 μL=0.02mL;V 上清:提取时上清液体积，0.8 mL;V 提取液一:加入提取液一体积，1 mL;V 提取液二:加入提取液二体积，0.15 mL;W:样本质量，g;Cpr: 样本蛋白浓度，mg/mL;细胞数量:以 104 计;V 液体:液体样本体积，0.1 mL。
+
+## RT-qPCR检测</br>
+### 引物设计</br>
+使用NCBI数据库（https://www.ncbi.nlm.nih.gov/）进行引物设计。
++ 找到基因序列页面，输入基因名，找到对应种属的基因信息页面，选择特定转录本后，在Nucleotide页面，点击Pick Primers，跳转到Primer designing tool，引物设计页面共分为PCR模板、引物参数、外显子/内含子选择和特异性检测参数四个模块。引物参数栏中，前两行是引物的序列栏，用于对已有的引物进行特异性分析，在设计引物的过程中并不会用到，因此留空即可。在PCR product size一行中，可以设定PCR引物的扩增产物长度范围，对于qPCR来讲，范围设为50~250时结果比较精确，可以先设定一个较小的范围，如80~150，如果该范围内没有设计出比较好的引物，则可以返回扩大产物大小范围。# of primers to return是指软件设计引物的数量(如果有的话)，默认为10对。引物的Tm值一行中，可以设定引物的最大、最小和最佳Tm值，以及正反向引物Tm的最大差值。对于qPCR来讲，默认的即为最佳Tm值60°C，不需做任何修改。选用跨外显子的方法进行设计，从而保证该引物不会对基因组DNA进行扩增。在设计结果中优秀引物的选取。</br>
+
+### RNA 的提取： 
+>使用组织匀浆器将大鼠组织在4℃条件下进行匀浆。加入200ul氯仿，进行涡旋震荡30秒。静置5分钟后12000g，4℃，离心15分钟，取上清加入新的无菌无酶EP管中，加入等量异丙醇，来回颠倒10次。静置5分钟，12000g，4℃，离心15分钟。轻轻弃上清，保留沉淀，加入1ml75%乙醇。来回颠倒10次，使沉淀重悬。静置2分钟，12000g，4℃，离心15分钟。弃上清，将EP管轻轻倒扣在吸水纸，将管中残余75%乙醇吸干，加入20ul无酶水对RNA进行溶解。-80℃保存。
+
+### 总RNA纯度和完整性检测		
+纯度检测：取1μl RNA样品50倍稀释，在BioPhotometer plus 核酸蛋白测定仪上测定OD值，OD260/OD280的比值大于1.8，说明制备的RNA较纯，无蛋白质污染。
+
+### cDNA的合成
+5X RT mix 2μl</br>
+RT Enzyme mix 0.5μl</br>
+primer mix 0.5μl</br>
+模板RNA 7μl</br>
+
+反应条件：</br>
+30°C, 10min</br>
+37°C, 15min</br>
+98°C, 5min</br> 
+4°C,  hold</br> 
+
+反应结束后，用灭菌去离子水将cDNA稀释5倍，-20℃保存。
+
+### 实时荧光定量PCR</br> 
+每个样本分别设置3个目的基因和3个内参基因的平行实验。PCR反应体系为20μL，根据说明书配置。反应条件为：
+95℃  2min
+95℃  10s
+60℃  34s（采集荧光信号）
+72℃  30s
+第二步到第四步执行为45循环，循环结束后从60℃升高到98℃获取熔解曲线。</br> 
+
+```
+20ul荧光定量PCR反应体系
+试剂	体积（μL）
+灭菌蒸馏水	4
+Bestar® SybrGreen qPCR mastermix	10
+Forward Primer(20μM)	0.5
+Reverse Primer(20μM)	0.5
+```
+### 分析方法</br> 
+在不同样本中，为了检测待测基因的表达差异，需要将样本量，实验误差等因素均一化，这就需要通过内参基因（表达量均一的基因）的CT值来平衡这些实验差异，获得-△CT值。对于一个样本待测基因的-△CT，计算如下：</br>
+-△CT=-【Mean（检测基因CT值）-Mean（内参基因CT值）】
+即：检测基因CT值的平均数-内参基因CT值的平均数。</br>
+对于两个样本间同一个检测基因表达量差异的计算公式为：</br>
+-△△CT=-（△CT样本1 -△CT样本2）=-【样本1(检测基因CT-内参基因CT)】-【样本2(检测基因CT-内参基因CT)】。
+
+以下3种情况同意记作Ct值为“35”，以红色字体表示：</br>
+（1）Ct值大于等于34且熔解曲线非目的峰；</br>
+（2）Ct值虽小于34但熔解曲线非目的峰；</br>
+（3）无扩增曲线或者无Ct值显示。</br>
+
+### 名词解释
+CT：每个反应管内的荧光信号到达设定阈值时所经历的循环数
+CT Mean：平均CT值
+Qty：绝对定量拷贝数
+Qty Mean：绝对定量平均拷贝数
+-△CT：-(样本平均CT值-内参平均CT值)
+2-△CT：2的-△CT指数次方
+
+### 引物序列
+<table class='table-bordered table-striped table-condensed'>
+    <tr>
+       <td>Gene</td>
+       <td>Forward Primer(5'->3')</td>
+       <td>Reserve Primer(5'->3')</td>
+    </tr>
+    <tr>
+        <td>Ada</td>
+        <td>GACGCCCGCATTCAACAAG</td>
+        <td>TGCGTAGTCCCTCCACTGTA</td>
+    </tr>
+    <tr>
+        <td>xdh</td>
+        <td>GCATCGCCAGCTCTCAGTAT</td>
+        <td>ACAAACTCACTGCGCTCGTA</td>
+    </tr>
+       <tr>
+        <td>PI3KCG</td>
+        <td>ATGAAGGGAGCCCCAGAAAAG</td>
+        <td>GCCCTAGGTGACCTGACACA</td>
+    </tr>
+    <tr>
+        <td>ABCG2</td>
+        <td>GTAGGTCGGTGTGCGAGTC</td>
+        <td>AGGATCTATGCCTTTCTAGCTGT</td>
+    </tr>
+    <tr>
+        <td>AKT2</td>
+        <td>CTCCTTGGGCACTCAAGCTC</td>
+        <td>GCTCCTCCGATACAGTATAGTCTTA</td>
+    </tr>
+</tr>
+</table>
+
+## 分子对接</br>
+### 涉及软件及最低版本要求</br>
+>1.python 2.5
+2.autodock 4.2.6
+3.MGLtools
+4.pyMOL 2.3.4
+5.OpenBabel（格式转换）
+
+### 蛋白及小分子准备</br>
+>1.准备蛋白质pdb格式文件，获取参考途径：https://www.rcsb.org/
+2.小分子收集网站【https://pubchem.ncbi.nlm.nih.gov/】，搜索小分子名称，下载3D模型结构（SDF格式），使用pymol软件，转换输出为PDB文件。
+3.1https://old.tcmsp-e.com/molecule.php?qn=655，计算系统生物学实验室，搜索化学名称，核对分子化学图，点击分子公式图下载MOL2格式文件。
+
+### 本次对接使用分子
+收集整理小分子及其化学公式图，具体名称见表格【HSTFT体内原型成分】（红色字体）。</br>
+
+>Hypoxanthine（次黄嘌呤）</br>
+Inosine（肌苷）</br>
+Rehmannioside D（地黄苷D）</br>
+Loganic acid（马钱苷酸）</br>
+Morroniside（莫诺苷）</br>
+Loganin*（马钱子苷）</br>
+Gentiopicroside（龙胆苦甙）</br>
+Albiflorin*（芍药内酯苷）</br>
+Prim-O-glucosylcimifugin（升麻苷）</br>
+5-O-Methylvisammioside（5-O-甲基维斯阿米醇苷）</br>
+Protodioscin（甲基原薯蓣皂甙）</br>
+Clematichinenoside AR*（灵仙新苷）</br>
+Ginsenoside Ro*（人参皂苷）</br>
+
+>文件存放位置：/SenGene/20221010XJJ/Process/20230108Auto_dock/Before/HSTFT体内原型成分.xlsx
+
+### 对接操作</br>
+①打开蛋白质文件：打开蛋白文件,根据视蛋白文件而定，加氢，选为受体，选中蛋白质文件，保存后删除界面蛋白文件。<br>
+②处理小分子：打开小分子文件，加氢后选为配体，选中小分子文件，检测小分子扭转键，执行为PDBQT后保存，保存后删除界面小分子文件。<br>
+
+③设置对接盒子：在Grid Box选项中，调节盒子大小，包裹蛋白质，往左缩小，往右扩大，分离其中的小分子，移出Grid Box，关闭Dejavu GUI界面。保存Grid Box，图①file→close saving current。导出为GDF文件：Grid→output→save GDF→需主动输入文件名＋gdf（如Drid.gdf）.</br>
+
+④运行Auto Grid确认弹出界面第一个Browse，是否与工作目录路径一致，点击第三个Browse→打开刚刚保存的GDF文件（Drid.gdf），弹出小框，切勿关闭，耐心等待。此时查看工作目录，出现一些Map文件（OKB），等待小框消失之后，文件生成大小会正常显示。</br>
+
+⑤运行参数及计算方式：Docking→Macromolecule→Set Rigid Filename半柔性对接（另一个选项为柔性对接）选中蛋白质PDTQT文件和小分子文件，Docking Output为Lamarckian GA（4.2）。</br>
+
+⑥运行Auto dock,生成结果后使用openbabel把对接后的PDBQT文件转换为PDB格式之后，用pymol绘制结果图：
+把整体分子转化成出版物格式，显示对接点，显示对接点名称，测量对接点H键距离，生成合成图片，一张为全景图，一张为细节图。</br>
+
+
+## 宏基因组测序</br>
+### 三代测序原理背景介绍</br>
+ONT(Oxford Nanopore Technologies,牛津纳米孔科技)测序是新一代基于纳米孔的单分子实时电信号测序技术，其各平台的测序原理相同。DNA/RNA链在马达蛋白的带领下与镶嵌在生物膜上的纳米孔蛋白结合并解螺旋，在生物膜两侧电压差的作用下，DNA/RNA链以一定的速率通过纳米孔通道蛋白，由于DNA/RNA链上不同碱基化学性质存在差异，所以当单个碱基或DNA/RNA分子通过纳米孔通道时，会引起不同电学信号的变化。通过对这些信号进行检测及对应，即可计算获得相应碱基的类型，完成序列的实时测定。</br>Nanopore的碱基判读是依据其电流信号而产生，因此其判定过程比较复杂。目前Nanopore根据电流的大小及电流大小的变化情况，通过“递归神经网络（Recurrent Neural Network）”的复杂算法对碱基进行判读。</br>基于Nanopore测序平台的宏基因组测序，通过生物信息分析获得环境中的基因功能信息和物种组成信息。通过基因功能的角度分析环境样品所具有的功能多样性；通过物种的角度分析分析环境样品中含有的物种的多样性。</br>
+![ONT测序原理](/Users/laisimonshengmin/Desktop/SenGene/20221010XJJ/Process/Metagenomic/src/ONT原理.jpg)
+
+### 实验流程</br>
+实验流程按照Oxford Nanopore Technologies(ONT)公司提供的标准protocol执行，包括样品质量检测、文库构建、文库质量检测和文库测序等流程，主要包括如下步骤：
+
+>
+1. 提取高质量基因组DNA，利用Nanodrop、Qubit4.0和0.35%琼脂糖凝胶电泳进行纯度、浓度和完整性质检；</br>
+2. BluePippin全自动核酸回收系统回收大片段DNA；</br>
+3. 文库构建;</br>
+1) DNA损伤修复和末端修复，磁珠纯化；
+2) 接头连接，磁珠纯化；
+3) Qubit文库定量。
+4. 上机测序。</br>
+
+#### 动物粪便基因组提取方法</br>
++ 收集约200-220mg粪便到一个2ml离心管，置冰上。
++ 加1.4ml 缓冲液ASL，连续涡旋振荡1分钟或者直到完全混匀均一。
++ 将重悬物70℃温育5分钟。
++ 涡旋振荡15秒，室温放置1分钟。最高速离心1分钟沉淀粪便颗粒。
++ 转移900μl上清到一个1.5ml离心管，加入100μl杂质清除剂AB，立刻涡旋振荡1分钟或者直到完全混匀均一，室温放置1分钟。最高速离心3分钟去除杂质。
++ 转移所有上清到一个1.5ml离心管，最高速离心3分钟。
++ 转移210μl上清到一个1.5ml离心管，加入20μl蛋白酶K (20mg/ml)溶液，充分混匀，加入200μl结合液CB，涡旋振荡15秒，充分混匀。70℃温育10分钟。
++ 冷却后加入100μl异丙醇，涡旋混匀。
++ 将上一步所得溶液和可能出现的沉淀都加入一个吸附柱AC中，（吸附柱放入收集管中）13,000rpm离心30秒，倒掉收集管中的废液。
++ 加入500μl抑制物去除液IR，12,000rpm 离心30秒，弃废液。
++ 加入700μl漂洗液WB（请先检查是否已加入无水乙醇!），12,000rpm 离心30秒，弃掉废液。
++ 加入500μl漂洗液WB，12,000rpm 离心30秒，弃掉废液。
++ 将吸附柱AC放回空收集管中，13,000rpm离心2分钟，尽量除去漂洗液，以免漂洗液中残留乙醇抑制下游反应。
++ 取出吸附柱AC，放入一个干净的离心管中，在吸附膜的中间部位加100－150μl洗脱缓冲液EB（洗脱缓冲液可事先在65-70℃水浴中预热），室温放置2分钟，12,000rpm 离心1分钟。将得到的溶液重新加入离心吸附柱中，室温放置2分钟，12,000rpm离心1分钟。
++ 50μl无酶水洗脱，获取DNA产物。
+
+#### 逆转录及二链生成</br>
+##### 逆转录</br>
+RT Primmer Mix	2μL；</br>
+Viral RNA	11μL</br>
+在65℃条件下孵育5min</br> 
+
+5× RT Buffer	4μL	</br>
+	0.1M	DTT	1μL	</br>
+RNase Inhibitor	1μL</br>
+Reverse Transcriptase	1μL	</br>
+上一步生成的产物 13μL</br>
+孵育条件是：</br>
+23℃，10min</br>
+50℃，30min</br>
+80℃，10min</br>
+
+##### 二链合成</br>
+二链合成酶	2μL	</br>
+二链合成 Buffer	8μL	</br>
+逆转录产物	20μL	</br>
+孵育条件为：37℃ 30min
+
+##### PCR 扩增</br>
+PCR Mix	25μL	</br>
+RLB Primmer 2μL	</br>
+Nucleasa-Free Water	19μL		</br>
+二链合成产物	4μL		</br>
+
+S1:	94℃ 1min</br>
+S2:94℃ 15s</br>
+S3:55℃ 15s</br>
+S4:65℃ 2.5min</br>
+S5:65℃ 6min	</br>
+S1一个循环后，S2-S4执行30个循环，S5一个循环。
+
+##### PCR 产物定量与混合</br>
++ PCR 八连管每管加入 18μl 无核酸酶水，加入 2μl PCR 产物
++ 取 2μl 稀释后的样品使用 Qubit 定量
++ 根据第二步的浓度，按每样品 50ng，将 PCR 产物混合为一管。如果样品数小于 4 个，每样品需混合 100ng。
+
+##### PCR 产物纯化与定量</br>
++ DNA 磁珠放室温 30min
++ 混合完成的 PCR 产物中加入相同体积的 DNA纯化磁珠（用前混匀），手动拨打混匀，除气泡，瞬时离心，室温静置 5 分钟；
++ 样品瞬时离心，放入磁力架中，静置待液体澄清透明，吸掉液体，加入 200μL 80%乙醇，（4）静置 10 秒以上，吸掉液体。
++ 重复上述步骤
++ 盖上盖子，瞬时离心，放回磁力架中，吸干残余的乙醇，开盖晾 30~60s。
++ 将离心管从磁力架上取下，加入 13μL Tris-NaCl，手动拨打混匀，除气泡，瞬时离心，室温静置 5min。
++ 将离心管放入磁力架，待液体澄清后。吸取 1μl 洗脱产物，使用 Qubit 进行核酸定量。
+
+##### 测序接头连接</br>
+取 150ng 洗脱产物按下表配制反应体系：</br>
+洗脱产物+ Tris-NaCl	10μL</br>
+RAP（RPB004 试剂盒中）	1μL</br>
+测序文库	总 11μL</br>
++ 手动拨打混匀，瞬时离心，20-23℃反应 20min。如果室温高于 23℃，在 PCR仪或有降温功能的金属浴上进行此反应。延长反应时间可以进一步提高数据产出。</br>
+
+##### 芯片 Primming</br>
++ 芯片正放拿出，不能倾斜或倒置；
++ 吸取 30μl FLT 加入到一整管 FB 中，混匀。
++ 顺时针打开芯片的 Primming port cover（由垂直打开到水平），露出 Primming port ，检查 cover 下是否存在气泡；
++ 将 Eppendorf 1000μL 的移液枪调到 200μL，插上吸头，将吸头垂直插入移液枪【不要往下按移液器蓝色按钮】，缓慢转动调节量程的旋钮至 220-230μL 位置【逆时针旋转】，吸出少量黄绿色 Buffer 以除气泡，移除吸头，检查芯片通道中 buffer 连续，无明显气泡存在。
++ 通过 Primming port 向芯片中缓慢加入 800μL 含 FLT 的 FB，不要打尽，剩一些液体以免引入气泡。室温静置 5min。
+
+##### 加载文库配制以下体系：</br>
+SQB	34μL</br>
+LB	25.5μL</br>
+H2O	4.5μL</br>
+测序文库	11μL</br>
+上样文库总计 75 μL</br>
+
++ 掀开 SpotON 的 cover，露出 SpotON Sample port，通过 Primming port 向芯片中缓慢加入 200μL 含 FLT 的 FB，过程中可以看到 SpotON Sample port 有液体冒出，不要打尽，剩一些液体以免引入气泡；用移液枪把上样文库吹打混匀，通过 SpotON Sample port + + 将上样文库悬空滴入 SpotON Sample port 中。盖上 SpotON Sample port 和 Primming port，文库加载完成。
+
+##### 芯片清洗（WSH004 试剂盒）
++ 2μLWMX + 398μL DIL，混匀。测序芯片不要离开测序仪，打开 Primming port，将 Eppendorf
+1000μL 的移液枪调到 200μL，插上吸头，将吸头垂直插入移液枪，缓慢逆时针转动调节量程的旋钮，吸出少量无色透明 Buffer 以除气泡，移除吸头，检查芯片通道中 buffer 连续，无明显气泡存在。通过 Primming port 向芯片中缓慢加入 400μL 的混合液，室温静置 60min。
++ A.芯片储存：除气泡，通过 Primming port 向芯片中缓慢加入 500μL 的 Storage Buffer【S】，关闭 Primming port，通过 Waste port 将 Waste section 中的废液全部吸出，芯片置于 4℃保存。
++ 立即进行后续文库测序：立即直接进行 Primming 的步骤。
+
+### 分析流程</br>
+对测序得到的原始reads进行质量控制并过滤得到Clean reads，用于后续生物信息学的分析。对Clean reads进行拼接组装、预测编码基因，并对编码基因进行通用数据库和专用数据库的功能注释；同时，对Clean reads进行分类学分析，统计样品物种组成和丰度信息。</br>
+
+# 实验结果
+## ELISA结果</br>
+![All_ELISA](/Users/laisimonshengmin/Desktop/SenGene/20221010XJJ/Process/20230227qPCR_Elisa_tif2/elisa_all11.jpg)
+>文件存放位置：SenGene/20221010XJJ/Process/20230227qPCR_Elisa_tif2
+
+## RT-qPCR结果</br>
+
+![All_qPCR](/Users/laisimonshengmin/Desktop/SenGene/20221010XJJ/Process/20230227qPCR_Elisa_tif2/qPCR_all1.jpg)
+>文件存放位置：SenGene/20221010XJJ/Process/20230227qPCR_Elisa_tif2
+
+## 分子对接结果</br>
+&emsp;通过PDB数据库获取TLR4蛋白（AF-Q9QX05-F1-model_v4）PDB文件，通过PubChem数据库获取目标小分子后，进行分子对接。结果显示Rehmannioside D，Loganic acid，Ginsenoside Ro，Clematichinenoside AR无可用结合盒子，不能形成对接。Protodioscin可形成对接，但是对接能较高，而5-O-Methylvisammioside、Albiflorin、Gentiopicroside、Hypoxanthine、Inosine、Loganin、Morroniside、Prim-O-glucosylcimifugin可形成对接，结合能力较强，结合能较低，可用于后续实验分析。具体数据如下表：
+![dock_resulsts](/Users/laisimonshengmin/Desktop/SenGene/20221010XJJ/Process/20230108Auto_dock/Results/table.jpg)
+
+![dock1](https://upload-images.jianshu.io/upload_images/15945431-28e075fbf5030f41.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240){width=50%}![dock2](https://upload-images.jianshu.io/upload_images/15945431-d07f64a2521cdd14.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240){width=50%}
+![dock3](https://upload-images.jianshu.io/upload_images/15945431-b1c328e1374a81b2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240){width=50%}![dock4](https://upload-images.jianshu.io/upload_images/15945431-b4652c1f715cfd61.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240){width=50%}
+
+## 宏基因组测序</br>
+### 样品分组信息</br>
+<table class='table-bordered table-striped table-condensed'>
+    <tr>
+        <td>样品名称 </td>
+        <td>备注 </td>
+        <td>样品名称 </td>
+        <td>备注 </td>
+        <td>样品名称 </td>
+        <td>备注 </td>
+        <td>样品名称 </td>
+        <td>备注 </td>
+    </tr>
+    <tr>
+        <td>58 </td>
+        <td>模型组</td>
+        <td>223 </td>
+        <td>中药组</td>
+        <td>59 </td>
+        <td>别嘌醇组</td>
+        <td>212 </td>
+        <td>空白组</td>
+    </tr>
+    <tr>
+        <td>215 </td>
+        <td>模型组</td>
+        <td>60 </td>
+        <td>中药组</td>
+        <td>222 </td>
+        <td>别嘌醇组</td>
+        <td>128 </td>
+        <td>空白组</td>
+    </tr>
+    <tr>
+        <td>135 </td>
+        <td>模型组</td>
+        <td>66 </td>
+        <td>中药组</td>
+        <td>214 </td>
+        <td>别嘌醇组</td>
+        <td>143 </td>
+        <td>空白组</td>
+    </tr>
+    <tr>
+        <td>144 </td>
+        <td>模型组</td>
+        <td>213 </td>
+        <td>中药组</td>
+        <td>131 </td>
+        <td>别嘌醇组</td>
+        <td>224 </td>
+        <td>空白组</td>
+    </tr>
+    <tr>
+        <td>205 </td>
+        <td>模型组</td>
+        <td>57 </td>
+        <td>中药组</td>
+        <td>141 </td>
+        <td>别嘌醇组</td>
+        <td>136 </td>
+        <td>空白组</td>
+    </tr>
+</table>
+
+### 样品提取结果</br>
+<table class='table-bordered table-striped table-condensed'>
+    <tr>
+        <td>样品名称 </td>
+        <td>检测结果 </td>
+        <td>Nanodrop检测浓度(ng/ul) </td>
+        <td>Qubit浓度(ng/ul) </td>
+        <td>体积(ul) </td>
+        <td>总量(ug) </td>
+        <td>OD260/280 </td>
+        <td>OD260/230 </td>
+    </tr>
+    <tr>
+        <td>58 </td>
+        <td>A </td>
+        <td>444.6 </td>
+        <td>354 </td>
+        <td>80 </td>
+        <td>28.32 </td>
+        <td>1.89 </td>
+        <td>1.98 </td>
+    </tr>
+    <tr>
+        <td>215 </td>
+        <td>A </td>
+        <td>172.6 </td>
+        <td>167 </td>
+        <td>90 </td>
+        <td>15.03 </td>
+        <td>1.89 </td>
+        <td>2.16 </td>
+    </tr>
+    <tr>
+        <td>135 </td>
+        <td>A </td>
+        <td>413.6 </td>
+        <td>382 </td>
+        <td>90 </td>
+        <td>34.38 </td>
+        <td>1.91 </td>
+        <td>2.17 </td>
+    </tr>
+    <tr>
+        <td>144 </td>
+        <td>A </td>
+        <td>149.7 </td>
+        <td>115 </td>
+        <td>170 </td>
+        <td>19.55 </td>
+        <td>1.85 </td>
+        <td>1.86 </td>
+    </tr>
+    <tr>
+        <td>205 </td>
+        <td>A </td>
+        <td>490.9 </td>
+        <td>394 </td>
+        <td>120 </td>
+        <td>47.28 </td>
+        <td>1.88 </td>
+        <td>2.06 </td>
+    </tr>
+    <tr>
+        <td>223 </td>
+        <td>A </td>
+        <td>457.8 </td>
+        <td>338 </td>
+        <td>170 </td>
+        <td>57.46 </td>
+        <td>1.79 </td>
+        <td>1.31 </td>
+    </tr>
+    <tr>
+        <td>60 </td>
+        <td>A </td>
+        <td>483.4 </td>
+        <td>368 </td>
+        <td>140 </td>
+        <td>51.52 </td>
+        <td>1.87 </td>
+        <td>1.43 </td>
+    </tr>
+    <tr>
+        <td>66 </td>
+        <td>A </td>
+        <td>425.9 </td>
+        <td>394 </td>
+        <td>90 </td>
+        <td>35.46 </td>
+        <td>1.9 </td>
+        <td>2.19 </td>
+    </tr>
+    <tr>
+        <td>213 </td>
+        <td>A </td>
+        <td>212.2 </td>
+        <td>186 </td>
+        <td>80 </td>
+        <td>14.88 </td>
+        <td>1.9 </td>
+        <td>2.11 </td>
+    </tr>
+    <tr>
+        <td>57 </td>
+        <td>A </td>
+        <td>406.5 </td>
+        <td>370 </td>
+        <td>90 </td>
+        <td>33.3 </td>
+        <td>1.89 </td>
+        <td>2.06 </td>
+    </tr>
+    <tr>
+        <td>59 </td>
+        <td>A </td>
+        <td>53.3 </td>
+        <td>50.6 </td>
+        <td>90 </td>
+        <td>4.554 </td>
+        <td>1.9 </td>
+        <td>2.39 </td>
+    </tr>
+    <tr>
+        <td>222 </td>
+        <td>A </td>
+        <td>151.8 </td>
+        <td>138 </td>
+        <td>90 </td>
+        <td>12.42 </td>
+        <td>1.89 </td>
+        <td>2.29 </td>
+    </tr>
+    <tr>
+        <td>214 </td>
+        <td>A </td>
+        <td>84.9 </td>
+        <td>77.2 </td>
+        <td>90 </td>
+        <td>6.948 </td>
+        <td>1.86 </td>
+        <td>2.01 </td>
+    </tr>
+    <tr>
+        <td>131 </td>
+        <td>A </td>
+        <td>222.4 </td>
+        <td>200 </td>
+        <td>90 </td>
+        <td>18 </td>
+        <td>1.88 </td>
+        <td>2.14 </td>
+    </tr>
+    <tr>
+        <td>141 </td>
+        <td>A </td>
+        <td>91.3 </td>
+        <td>90.8 </td>
+        <td>90 </td>
+        <td>8.172 </td>
+        <td>1.9 </td>
+        <td>2.4 </td>
+    </tr>
+    <tr>
+        <td>212 </td>
+        <td>A </td>
+        <td>182.7 </td>
+        <td>174 </td>
+        <td>90 </td>
+        <td>15.66 </td>
+        <td>1.89 </td>
+        <td>2.3 </td>
+    </tr>
+    <tr>
+        <td>128 </td>
+        <td>A </td>
+        <td>185.1 </td>
+        <td>188 </td>
+        <td>90 </td>
+        <td>16.92 </td>
+        <td>1.9 </td>
+        <td>2.28 </td>
+    </tr>
+    <tr>
+        <td>143 </td>
+        <td>A </td>
+        <td>125.8 </td>
+        <td>115 </td>
+        <td>90 </td>
+        <td>10.35 </td>
+        <td>1.91 </td>
+        <td>2.35 </td>
+    </tr>
+    <tr>
+        <td>224 </td>
+        <td>A </td>
+        <td>135.3 </td>
+        <td>118 </td>
+        <td>90 </td>
+        <td>10.62 </td>
+        <td>1.91 </td>
+        <td>2.36 </td>
+    </tr>
+    <tr>
+        <td>136 </td>
+        <td>A </td>
+        <td>152.2 </td>
+        <td>149 </td>
+        <td>90 </td>
+        <td>13.41 </td>
+        <td>1.91 </td>
+        <td>2.35</td>
+    </tr>
+</table>
+
+### 基本分析结果</br>
+#### 测序数据质控</br>
+Nanopore 测序的下机数据的原始数据格式为包含所有原始测序信号的二进制fast5格式，单条read对应单个fast5文件。通过MinKNOW软件包中的Albacore软件进行base calling后会将fast5格式数据转换为fastq格式。然后，经进一步过滤接头、低质量及短片段(长度<2000 bp)的reads后，得到总的数据集，以下为选取部分数据结果展示，A，B，C，D分别代表空白组，模型组，中药组，别嘌醇组，其信息统计见下表。</br>
+
+<table class='table-bordered table-striped table-condensed'>
+    <tr>
+        <td>SampleID</td>
+        <td>SeqNum</td>
+        <td>SumBase</td>
+        <td>N50Len</td>
+        <td>N90Len</td>
+        <td>MeanLen</td>
+        <td>MaxLen</td>
+        <td>MeanQual</td>
+    </tr>
+    <tr>
+        <td>A1</td>
+        <td>6,967,037</td>
+        <td>48,856,457,434</td>
+        <td>9,552</td>
+        <td>3,555</td>
+        <td>7,012</td>
+        <td>84,329</td>
+        <td>8.56</td>
+    </tr>
+    <tr>
+        <td>A2</td>
+        <td>6,967,037</td>
+        <td>48,856,457,434</td>
+        <td>9,552</td>
+        <td>3,555</td>
+        <td>7,012</td>
+        <td>84,329</td>
+        <td>8.56</td>
+    </tr>
+    <tr>
+        <td>A3</td>
+        <td>6,967,037</td>
+        <td>48,856,457,434</td>
+        <td>9,552</td>
+        <td>3,555</td>
+        <td>7,012</td>
+        <td>84,329</td>
+        <td>8.56</td>
+    </tr>
+    <tr>
+        <td>B1</td>
+        <td>5,689,904</td>
+        <td>26,261,007,334</td>
+        <td>6,930</td>
+        <td>2,023</td>
+        <td>4,615</td>
+        <td>142,112</td>
+        <td>9.3</td>
+    </tr>
+    <tr>
+        <td>B2</td>
+        <td>5,689,904</td>
+        <td>26,261,007,334</td>
+        <td>6,930</td>
+        <td>2,023</td>
+        <td>4,615</td>
+        <td>142,112</td>
+        <td>9.3</td>
+    </tr>
+    <tr>
+        <td>B3</td>
+        <td>5,689,904</td>
+        <td>26,261,007,334</td>
+        <td>6,930</td>
+        <td>2,023</td>
+        <td>4,615</td>
+        <td>142,112</td>
+        <td>9.3</td>
+    </tr>
+    <tr>
+        <td>C1</td>
+        <td>5,689,904</td>
+        <td>26,261,007,334</td>
+        <td>6,930</td>
+        <td>2,023</td>
+        <td>4,615</td>
+        <td>142,112</td>
+        <td>9.3</td>
+    </tr>
+    <tr>
+        <td>C2</td>
+        <td>5,689,904</td>
+        <td>26,261,007,334</td>
+        <td>6,930</td>
+        <td>2,023</td>
+        <td>4,615</td>
+        <td>142,112</td>
+        <td>9.3</td>
+    </tr>
+    <tr>
+        <td>C3</td>
+        <td>5,689,904</td>
+        <td>26,261,007,334</td>
+        <td>6,930</td>
+        <td>2,023</td>
+        <td>4,615</td>
+        <td>142,112</td>
+        <td>9.3</td>
+    </tr>
+    <tr>
+        <td>D1</td>
+        <td>1,871,987</td>
+        <td>9,251,293,492</td>
+        <td>8,926</td>
+        <td>1,936</td>
+        <td>4,941</td>
+        <td>140,281</td>
+        <td>9.21</td>
+    </tr>
+    <tr>
+        <td>D2</td>
+        <td>1,871,987</td>
+        <td>9,251,293,492</td>
+        <td>8,926</td>
+        <td>1,936</td>
+        <td>4,941</td>
+        <td>140,281</td>
+        <td>9.21</td>
+    </tr>
+    <tr>
+        <td>D3</td>
+        <td>1,871,987</td>
+        <td>9,251,293,492</td>
+        <td>8,926</td>
+        <td>1,936</td>
+        <td>4,941</td>
+        <td>140,281</td>
+        <td>9.21</td>
+    </tr>
+</table>
+
+注：SampleID：样品编号；SeqNum：序列条数；SumBase: 总碱基数；N50Len：数据N50长度；N90Len：数据N90长度；MeanLen：reads平均长度；MaxLen：最长Reads长度；MeanQual：平均Reads质量值。</br>
+
+#### ONT宏基因组组装</br>
+首先使用软件Canu[^1]利用ONT数据进行宏基因组组装，得到contig序列，然后利用Pilon[^2]软件借助二代数据对组装结果进行校正，保证基因组错误率在0.01%以下。
+采用QUAST[^3]软件对组装结果进行评估。组装结果统计信息如下表所示：
+<table class='table-bordered table-striped table-condensed'>
+    <tr>
+        <td>SampleID</td>
+        <td>Contig Num.</td>
+        <td>Total Len.(bp)</td>
+        <td>Largest Len.(bp)</td>
+        <td>N50(bp)</td>
+        <td>GC(%)</td>
+        <td>Mapped(%)</td>
+    </tr>
+    <tr>
+        <td>A1</td>
+        <td>1,068</td>
+        <td>42,872,265</td>
+        <td>566,960</td>
+        <td>55,578</td>
+        <td>41.06</td>
+        <td>81.14</td>
+    </tr>
+    <tr>
+        <td>A2</td>
+        <td>1,158</td>
+        <td>44,974,047</td>
+        <td>583,708</td>
+        <td>55,266</td>
+        <td>41.17</td>
+        <td>82.03</td>
+    </tr>
+    <tr>
+        <td>A3</td>
+        <td>1,097</td>
+        <td>43,591,582</td>
+        <td>673,075</td>
+        <td>54,423</td>
+        <td>41.02</td>
+        <td>81.6</td>
+    </tr>
+    <tr>
+        <td>B1</td>
+        <td>561</td>
+        <td>23,985,453</td>
+        <td>575,162</td>
+        <td>54,041</td>
+        <td>48.86</td>
+        <td>48.26</td>
+    </tr>
+    <tr>
+        <td>B2</td>
+        <td>545</td>
+        <td>24,402,741</td>
+        <td>1,218,985</td>
+        <td>57,550</td>
+        <td>49.38</td>
+        <td>48.22</td>
+    </tr>
+    <tr>
+        <td>B3</td>
+        <td>547</td>
+        <td>23,598,306</td>
+        <td>700,814</td>
+        <td>56,628</td>
+        <td>49.07</td>
+        <td>47.13</td>
+    </tr>
+    <tr>
+        <td>C1</td>
+        <td>477</td>
+        <td>58,810,097</td>
+        <td>3,121,651</td>
+        <td>385,890</td>
+        <td>44.17</td>
+        <td>88.21</td>
+    </tr>
+    <tr>
+        <td>C2</td>
+        <td>502</td>
+        <td>59,962,178</td>
+        <td>3,076,433</td>
+        <td>341,569</td>
+        <td>44.38</td>
+        <td>88.36</td>
+    </tr>
+    <tr>
+        <td>C3</td>
+        <td>495</td>
+        <td>59,574,838</td>
+        <td>3,431,592</td>
+        <td>356,297</td>
+        <td>44.09</td>
+        <td>88.28</td>
+    </tr>
+    <tr>
+        <td>D1</td>
+        <td>45</td>
+        <td>5,767,966</td>
+        <td>487,372</td>
+        <td>161,419</td>
+        <td>46.32</td>
+        <td>99.89</td>
+    </tr>
+    <tr>
+        <td>D2</td>
+        <td>52</td>
+        <td>6,057,218</td>
+        <td>545,760</td>
+        <td>115,626</td>
+        <td>46.32</td>
+        <td>99.89</td>
+    </tr>
+    <tr>
+        <td>D3</td>
+        <td>40</td>
+        <td>5,402,894</td>
+        <td>629,965</td>
+        <td>169,156</td>
+        <td>46.22</td>
+        <td>99.84</td>
+    </tr>
+</table>
+注：Sample：样品编号； Contig Numbers：组装后contigs的数目；Total Length：所有contigs的碱基数之和；Largest Length：最长contig的碱基数；N50：contigs由长到短排序并统计累积长度，当加上某条contig而使累积长度等于所有contigs长度之和的一半时，该contig的长度即为N50；GC(%)：基因组GC含量；Mapped：测序reads与组装contigs的比对率。</br>
+
+#### ONT宏基因组组分分析</br>
+#####  基因预测</br>
+采用MetaGeneMark[^4]软件（http://exon.gatech.edu/meta_gmhmmp.cgi，Version 3.26），使用默认参数来识别基因组中的编码区域。</br>
+
+<table class='table-bordered table-striped table-condensed'>
+    <tr>
+        <td>SampleID</td>
+        <td>Gene number</td>
+        <td>Total Len.(bp)</td>
+        <td>Average(bp)(bp)</td>
+        <td>Max length(bp)</td>
+        <td>Min length(bp)</td>
+    </tr>
+    <tr>
+        <td>A1</td>
+        <td>81,038</td>
+        <td>29,557,050</td>
+        <td>364.0</td>
+        <td>3,210</td>
+        <td>102</td>
+    </tr>
+    <tr>
+        <td>A2</td>
+        <td>84,521</td>
+        <td>30,956,340</td>
+        <td>366.0</td>
+        <td>3,315</td>
+        <td>102</td>
+    </tr>
+    <tr>
+        <td>A3</td>
+        <td>82,204</td>
+        <td>30,030,783</td>
+        <td>365.0</td>
+        <td>3,726</td>
+        <td>102</td>
+    </tr>
+    <tr>
+        <td>B1</td>
+        <td>43,312</td>
+        <td>17,323,032</td>
+        <td>399.0</td>
+        <td>7,146</td>
+        <td>102</td>
+    </tr>
+    <tr>
+        <td>B2</td>
+        <td>44,179</td>
+        <td>17,695,605</td>
+        <td>400.0</td>
+        <td>5,076</td>
+        <td>102</td>
+    </tr>
+    <tr>
+        <td>B3</td>
+        <td>2,706</td>
+        <td>17,075,034</td>
+        <td>399.0</td>
+        <td>3,819</td>
+        <td>102</td>
+    </tr>
+    <tr>
+        <td>C1</td>
+        <td>2,264</td>
+        <td>43,101,309</td>
+        <td>421.0</td>
+        <td>4,386</td>
+        <td>102</td>
+    </tr>
+    <tr>
+        <td>C2</td>
+        <td>4,198</td>
+        <td>43,921,035</td>
+        <td>421.0</td>
+        <td>4,965</td>
+        <td>102</td>
+    </tr>
+    <tr>
+        <td>C3</td>
+        <td>3,352</td>
+        <td>43,526,679</td>
+        <td>421.0</td>
+        <td>4,959</td>
+        <td>102</td>
+    </tr>
+    <tr>
+        <td>D1</td>
+        <td>8,623</td>
+        <td>4,566,204</td>
+        <td>529.0</td>
+        <td>4,443</td>
+        <td>102</td>
+    </tr>
+    <tr>
+        <td>D2</td>
+        <td>9,048</td>
+        <td>4,796,412</td>
+        <td>530.0</td>
+        <td>4,521</td>
+        <td>102</td>
+    </tr>
+    <tr>
+        <td>D3</td>
+        <td>8,023</td>
+        <td>4,212,351</td>
+        <td>525.0</td>
+        <td>4,884</td>
+        <td>102</td>
+    </tr>
+</table>
+注：Sample ID：样品编号；Genes number：预测到的基因数目；Total length(bp)：所有预测基因的碱基数之和；Average(bp)：预测基因的平均碱基数；Max length(bp)：最大基因长度；Min length(bp)：最小基因长度。</br>
+
+#### 功能基因的Beta多样性分析</br>
+##### 功能基因的主成分分析</br>
+主成分分析(Principal Component Analysis, PCA)是一种分析和简化数据集的技术，通过将方差进行分解，将多组数据的差异反映在二维坐标图上，坐标轴取能够最大反映方差的两个特征值。通过分析不同样品功能基因组成可以反映样品间的差异和距离。PCA图上两个样品距离越近，则表示这两个样品中功能基因的组成越相似。使用R语言工具分别绘制不同水平的PCA分析图如下
+![PCA分析](/Users/laisimonshengmin/Desktop/SenGene/20221010XJJ/Process/Metagenomic/src/PCA1.jpg)
+
+
+##### 香农指数分析</br>
+物种多样性中，香农-辛普森指数中，包含着两个成分：①种数；②各种间个体分配的均匀性（equiability或evenness）。各种之间，个体分配越均匀，H值就越大。如果每一个体都属于不同的种，多样性指数就最大；如果每一个体都属于同一种，则其多样性指数就最小。</br>
+![香农指数分析1](/Users/laisimonshengmin/Desktop/SenGene/20221010XJJ/Process/Metagenomic/20230837humann/alapha/Shannon_class.png){width=50%}![香农指数分析2](/Users/laisimonshengmin/Desktop/SenGene/20221010XJJ/Process/Metagenomic/20230837humann/alapha/Shannon_phy.png){width=50%}
+![辛普森指数分析1](/Users/laisimonshengmin/Desktop/SenGene/20221010XJJ/Process/Metagenomic/20230837humann/alapha/simpson_class.png){width=50%}![辛普森指数分析2](/Users/laisimonshengmin/Desktop/SenGene/20221010XJJ/Process/Metagenomic/20230837humann/alapha/simpson_phy.png){width=50%}
+
+
+#### 组间比较分析结果</br>
+![All_mag_figs](/Users/laisimonshengmin/Desktop/SenGene/20221010XJJ/Process/Metagenomic/fig_for_biding/Picture3_mark.png)
+物种组成及组间差异分析。</br>
+A.各组物种组成及丰度分析。通过选择各组代表性样品进行物种组成分析，微生物及细菌为各组优势物种。其中正常组及别嘌呤醇组微生物丰度较高，分别为65.5%及69.7%，模型组（48.7%）及中药组（46.8%）较低。与正常组（54.1%）相比，模型组细菌丰度下降（40.2%）,中药组细菌比例最少，仅为32.6%,提示药物对细菌状态影响较大。</br>
+
+各组物种注释桑基图。</br>依次是正常组，模型组，中药组，别嘌呤醇组。各组流量走向及物种变化基本一致，符合同种属宏基因组注释内容。与正常组相比，其余三组蛋白细菌节点明显减少，模型组疣菌属细分中断，别嘌呤醇组缺少乳酸菌属YL32可分节点，中药组肠鼠杆菌流向减少，提示各组可能通过影响不同物种的丰度发挥作用。</br>
+
+C.Clade及taxon分类热图。从图上可知，各组分类及分支界限明显，列聚类未见明显离群样品，不同组间物种差异明显。</br>
+
+各组优势物种丰度比较分析。</br>
+图D中各组排列依次为正常组，模型组，中药组和别嘌呤醇组。图片依次为各组细菌丰度。各组厚壁菌门相对丰度比较。乳酸杆菌类各组相对含量比较。Lachnoclostridium丰度变化。乳酸菌属YL32相对丰度比较。</br>
+
+##### GO数据库注释
+
+GO[^7](gene ontology)是基因本体联合会(Gene Onotology Consortium)所建立的数据库，旨在建立一个适用于各种物种的，对基因和蛋白质功能进行限定和描述的，并能随着研究不断深入而更新的语义词汇标准。</br>
+目前基因的相同功能在不同的功能数据库可能会使用不同的术语，好比是不同的方言。这样导致使用多种数据库注释时的分歧，不利于功能注释的长期发展和使用。Gene Ontology就是为了解决上述问题而建立的，使各种数据库中基因产物功能描述相一致而发起的一个项目。
+GO数据库对于生物功能逐渐深入的倒树根形结构，最高级别功能节点包括三个：（1）细胞组分（Cellular Component）：用于描述亚细胞结构、位置和大分子复合物；（2）分子功能（Molecular Function）：用于描述基因、基因产物个体的功能；（3）生物过程（ Biological Process）：用来描述基因编码的产物所参与的生物过程。</br>
+在具体注释时，基于前面Nr数据库blast比对结果，其中比对到Nr中的基因对应于GO数据库中包含功能注释信息的节点上，应用软件Blast2GO[8]进行可以找出这些对应的节点，这些节点对应的注释信息即为测序基因组中基因的注释信息。</br>
+![GO通路富集分析](/Users/laisimonshengmin/Desktop/SenGene/20221010XJJ/Process/Metagenomic/src/GO_T.jpg)
+
+[^1]:Koren S, Walenz BP, Berlin K, Miller JR, Phillippy AM. Canu: scalable and accurate long-read assembly via adaptive k-mer weighting and repeat separation. Genome Research. (2017).
+[^2]:Bruce J Walker . Pilon: an integrated tool for comprehensive microbial variant detection and genome assembly improvement. PLoS ONE. 2014.
+[^3]:Gurevich A, Saveliev V, Vyahhi N, et al. QUAST: quality assessment tool for genome assemblies[J]. Bioinformatics, 2013, 29(8):1072-1075.
+[^4]:Zhu W, Lomsadze A, Borodovsky M. Ab initio gene identification in metagenomic sequences. Nucleic acids research. 2010;38(12):132–132.
+[^7]:Ashburner M, Ball C A, Blake J A, et al. Gene Ontology: tool for the unification of biology[J]. Nature genetics, 2000, 25(1): 25-29.
